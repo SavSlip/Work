@@ -19,22 +19,10 @@ public class Calculator extends ConvertorArabicRoman {
             throw new ScannerExceptions("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
         }
 
-//        if (inputLine.contains("+"))
-//            operator = "+";
-//        else if (inputLine.contains("-"))
-//            operator = "-";
-//        else if (inputLine.contains("*"))
-//            operator = "*";
-//        else
-//            operator = "/";
-
-
         firstOperand = (inputLine.substring(0, inputLine.indexOf(findOperator(inputLine))).trim()); // ищем с строке первый операнд
         secondOperand = (inputLine.substring(inputLine.indexOf(findOperator(inputLine)) + 1).trim()); //ищем второй операнд
-//        System.out.println(firstOperand);
-//        System.out.println(secondOperand);
-//        System.out.println(validCorrectNumber(firstOperand));
-//        System.out.println(validCorrectNumber(secondOperand));
+
+
         // Валидируем операнды на правильность написания, сравниваем между собой римские и арабские цифры
         if (validCorrectNumber(firstOperand).equals("ARABIC")&&validCorrectNumber(secondOperand).equals("ARABIC")){
             System.out.println(calculator((Integer.parseInt(firstOperand)),(Integer.parseInt(secondOperand)),findOperator(inputLine)));
