@@ -2,11 +2,9 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-// \b(X{1}|IX{1}|VIII{1}|VII{1}|VI{1}|V{1}|IV{1}|I{1,3})\b
-// \s*(\d{1,2}|\D{1,2})\s*[\-\+\*\/]\s*(\d{1,2}|\D{1,2})\s*
+
 public class Calculator extends ConvertorArabicRoman {
     public static void main(String[] args) throws ScannerExceptions {
-//        String operator;
         String firstOperand;
         String secondOperand;
 
@@ -57,7 +55,7 @@ public class Calculator extends ConvertorArabicRoman {
         else if (matcher1.matches())
             operand = "ROMAN";
 
-        else throw new ScannerExceptions("Один из операндов либо не является числом, либо числом вне диапазона (1-10,I-X)");
+        else throw new ScannerExceptions("Один из операндов либо не является числом, либо является числом вне диапазона (1-10,I-X)");
         return operand;
     }
 
