@@ -3,3 +3,4 @@ public class ScannerExceptions extends Exception {
         super(message);
     }
 }
+
