@@ -3,7 +3,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class Calculator extends ConvertorArabicRoman {
+public class Calculator{
     public static void main(String[] args) throws ScannerExceptions {
         String firstOperand;
         String secondOperand;
@@ -26,7 +26,8 @@ public class Calculator extends ConvertorArabicRoman {
             System.out.println(calculator((Integer.parseInt(firstOperand)),(Integer.parseInt(secondOperand)),findOperator(inputLine)));
         }
         else if (validCorrectNumber(firstOperand).equals("ROMAN")&&validCorrectNumber(secondOperand).equals("ROMAN")){
-            System.out.println(convertToRoman(calculator(convertToArabic(firstOperand),convertToArabic(secondOperand),findOperator(inputLine))));
+            System.out.println(ConvertorArabicRoman.convertToRoman(calculator(ConvertorArabicRoman.convertToArabic(firstOperand),
+                    ConvertorArabicRoman.convertToArabic(secondOperand),findOperator(inputLine))));
         }
         else throw new ScannerExceptions("Одновременно производится математическое действие с римским и с арабским числами");
 

@@ -1,10 +1,10 @@
 public class ConvertorArabicRoman {
 
 
-    static int[] ARABIC = {
+    private static final int[] ARABIC = {
             100, 90, 50, 40, 10, 9, 5, 4, 1
     };
-    static String[] ROMAN = {
+    private static final String[] ROMAN = {
             "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"
     };
 
